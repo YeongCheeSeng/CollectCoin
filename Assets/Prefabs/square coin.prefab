@@ -259,7 +259,7 @@ MonoBehaviour:
   CoinsAmount: 10
   CoinCollectedAudio: {fileID: 7758775589111145753, guid: 027bf51fb5b10f94e868395cc314cdf6, type: 3}
   CoinCollectedEffect: {fileID: 9111987876426852958, guid: b6a801653fe2d514c90bbda165dede0f, type: 3}
-  Effects: {fileID: 0}
+  Effects: {fileID: 9111987876426852958, guid: b6a801653fe2d514c90bbda165dede0f, type: 3}
   DespawnInterval: 2
   tempCoinsFloat: 0
   _Collider2D: {fileID: 0}
