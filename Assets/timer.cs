@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class timer : MonoBehaviour
 {
@@ -22,9 +23,10 @@ public class timer : MonoBehaviour
         {
             Debug.Log("Times UP");
             timeUp = true;
+            SceneManager.LoadScene("end menu");
             return;
         }
-
         CurrenTime -= Time.deltaTime;
+       
     }
 }
