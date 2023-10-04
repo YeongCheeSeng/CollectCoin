@@ -22,7 +22,6 @@ public class spawner : MonoBehaviour
     private float spawnTimer;
 
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -63,7 +62,7 @@ public class spawner : MonoBehaviour
         CoinsCollected += amount;
         Debug.Log("Coin Collected" + CoinsCollected);
 
-        if(Text != null)
+        if (Text != null)
         {
             Text.text = CoinsCollected.ToString();
         }
