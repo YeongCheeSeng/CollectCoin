@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class timer : MonoBehaviour
 {
     public float InitialDuration = 60f;
     public float CurrenTime = 0f;
     private bool timeUp = false;
+
+    public float TimeLeft;
+    public TMP_Text TimerText;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +31,18 @@ public class timer : MonoBehaviour
             return;
         }
         CurrenTime -= Time.deltaTime;
+        TimeLeft = CurrenTime;
        
+    }
+
+    public void Timer()
+    {
+        Debug.Log("Timer " + CurrenTime);
+
+        if (TimerText != null)
+        {
+            TimerText.text = CurrenTime.ToString();
+        }
+
     }
 }

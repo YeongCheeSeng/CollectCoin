@@ -14,7 +14,7 @@ public class spawner : MonoBehaviour
     public float MinX = -1f;
     public float MaxX = 1f;
 
-    public float CoinsCollected;
+    public static float CoinsCollected;
     public TMP_Text Text;
 
     private float randomX;
@@ -26,6 +26,7 @@ public class spawner : MonoBehaviour
     void Start()
     {
         spawnTimer = SpawnInterval;
+        CoinsCollected = 0;
     }
 
 
@@ -53,7 +54,6 @@ public class spawner : MonoBehaviour
             }
             Debug.Log("Times up, should spawn coin");
             spawnTimer = SpawnInterval;
-
         }
     }
 
@@ -66,6 +66,6 @@ public class spawner : MonoBehaviour
         {
             Text.text = CoinsCollected.ToString();
         }
-
     }
+
 }
