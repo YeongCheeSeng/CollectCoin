@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using Unity.VisualScripting;
 
 public class timer : MonoBehaviour
 {
@@ -10,13 +11,16 @@ public class timer : MonoBehaviour
     public float CurrenTime = 0f;
     private bool timeUp = false;
 
+    private timer _timer;
     public float TimeLeft;
-    public TMP_Text TimerText;
+    public TMP_Text Text;
 
     // Start is called before the first frame update
     void Start()
     {
         CurrenTime = InitialDuration;
+        _timer = FindObjectOfType<timer>();
+        TimeLeft = CurrenTime;
     }
 
     // Update is called once per frame
@@ -30,18 +34,27 @@ public class timer : MonoBehaviour
             SceneManager.LoadScene("end menu");
             return;
         }
-        CurrenTime -= Time.deltaTime;
-        TimeLeft = CurrenTime;
-       
+        TimeCounter();
+        Timer();
+    }
+
+    public void TimeCounter()
+    {
+        CurrenTime -= Time.deltaTime;       
     }
 
     public void Timer()
     {
         Debug.Log("Timer " + CurrenTime);
 
-        if (TimerText != null)
+        if (_timer != null)
         {
-            TimerText.text = CurrenTime.ToString();
+            _timer.TimeCounter();
+        }
+
+        if (Text != null)
+        {
+            Text.text = "Time Left: " + ((int)CurrenTime).ToString();
         }
 
     }

@@ -64,7 +64,7 @@ public class spawner : MonoBehaviour
 
         if (Text != null)
         {
-            Text.text = CoinsCollected.ToString();
+            Text.text = "Score: " + CoinsCollected.ToString();
         }
     }
 
