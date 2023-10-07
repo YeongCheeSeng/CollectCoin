@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/CollectCoin.unity
+    path: Assets/Scenes/CollectCoin.unity
     guid: ce2537a1772261f439316a01b12ef19e
   - enabled: 1
-    path: Assets/finished prototype.unity
+    path: Assets/Scenes/finished prototype.unity
     guid: edff40913a944b948a4d31f69fe18e98
   - enabled: 1
-    path: Assets/end menu.unity
+    path: Assets/Scenes/end menu.unity
     guid: 53a01d18434af4149a4e963376fee466
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
